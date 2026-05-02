@@ -1,0 +1,30 @@
+{
+  "name": "@sadquant/ink-tui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "sadquant-ink-tui": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node dist/state.test.js && node dist/keyboard.test.js && node dist/runner.test.js && node dist/App.test.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "ink": "^5.0.1",
+    "ink-divider": "^4.1.1",
+    "ink-markdown": "^1.0.4",
+    "ink-spinner": "^5.0.0",
+    "react": "^18.3.1",
+    "strip-ansi": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^18.3.1",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
